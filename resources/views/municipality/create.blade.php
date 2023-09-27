@@ -13,8 +13,8 @@
             <input type="text" class="form-control " id="name" name="name" placeholder="Ingrese el nombre del municipio" required>
         </div>
 
-        <button type="submit" class="btn btn-success">Crear</button>
-        <a href="./" class="btn btn-danger">Cancelar</a>
+        <button type="submit" class="btn btn-success"><i class="bi bi-plus-lg"></i> Crear</button>
+        <a href="./" class="btn btn-danger"><i class="bi bi-x-lg"></i> Cancelar</a>
 
     </form>
 </div>

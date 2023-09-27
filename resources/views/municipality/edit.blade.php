@@ -15,8 +15,8 @@
             <input type="text" class="form-control" value="{{ $municipality->name }}" id="name" name="name" placeholder="Ingrese el nombre del municipio" required>
         </div>
 
-        <button type="submit" class="btn btn-success">Editar</button>
-        <a href="{{ route('apple.index') }}" class="btn btn-danger">Cancelar</a>
+        <button type="submit" class="btn btn-success"><i class="bi bi-pencil-square"></i> Editar</button>
+        <a href="{{ route('apple.index') }}" class="btn btn-danger"><i class="bi bi-x-lg"></i> Cancelar</a>
 
     </form>
 </div>

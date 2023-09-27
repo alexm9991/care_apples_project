@@ -53,8 +53,8 @@
 
         </div>
 
-        <button type="submit" class="btn btn-success">Editar</button>
-        <a href="{{ route('apple.index') }}" class="btn btn-primary">Volver</a>
+        <button type="submit" class="btn btn-success"><i class="bi bi-pencil-square"></i> Editar</button>
+        <a href="{{ route('apple.index') }}" class="btn btn-primary"><i class="bi bi-arrow-return-left"></i> Volver</a>
 
     </form>
 </div>
