@@ -34,8 +34,16 @@
             <td class="text-center align-middle" style="font-size: 130%;">{{ $apple->name }}</td>
             <td class="text-center align-middle" style="font-size: 130%;">{{ $apple->location }}</td>
             <td class="text-center align-middle" style="font-size: 130%;">{{ $apple->address }}</td>
-            <td class="text-center align-middle" style="font-size: 130%;">{{ $apple->coordenates }}</td>
-            <td class="text-center align-middle" style="font-size: 130%;">{{ $apple->municipalities_id }}</td>
+            <td class="text-center align-middle" style="font-size: 130%;">{{ $apple->latitude }} , {{ $apple->length }}</td>
+
+            <td class="text-center align-middle" style="font-size: 130%;">
+                @if ($apple->municipalities->isNotEmpty())
+                    {{ $apple->municipalities->first()->name }}
+                @else
+                    Sin municipio asignado
+                @endif
+            </td>
+
                 <td class="text-center align-middle" style="font-size: 130%;">icon ver</td>
                 <td class="text-center">
                     <div class="row">

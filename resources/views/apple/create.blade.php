@@ -10,7 +10,7 @@
         @csrf
         <div class="form-group">
             <label for="code">CODIGO</label>
-            <input type="text" class="form-control " id="code" name="code" require>
+            <input type="number" class="form-control " id="code" name="code" require>
         </div>
         <div class="form-group">
 
@@ -27,8 +27,12 @@
             <input type="text" class="form-control " id="address" name="address" require>
         </div>
         <div class="form-group">
-            <label for="coordinates">COORDENADAS</label>
-            <input type="text" class="form-control " id="coordinates" name="coordinates" placeholder="Ingrese coordenada" require>
+            <label for="latitude">LATITUD</label>
+            <input type="double" class="form-control " id="latitude" name="latitude" placeholder="Ingrese latitud" require>
+        </div>
+        <div class="form-group">
+            <label for="length">LONGITUD</label>
+            <input type="double" class="form-control " id="length" name="length" placeholder="Ingrese longitud" require>
         </div>
         <div class="form-group">
             <label for="municipalities_id">MUNICIPIO</label>
@@ -43,7 +47,6 @@
             </select>
 
         </div>
-
 
         <button type="submit" class="btn btn-success">Crear</button>
         <a href="./" class="btn btn-danger">Cancelar</a>
