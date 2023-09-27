@@ -9,7 +9,7 @@ class Service_Type_Category extends Model
 {
     use HasFactory;
     protected $fillable=['service_type_id','service_category_id'];
-    protected $table='service_type_category';
+    protected $table='service__type__category';
 
     public function serviceType()
     {

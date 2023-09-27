@@ -10,7 +10,7 @@
         @csrf
         <div class="form-group">
             <label for="name">TIPO DE SERVICIO</label>
-            <input type="text" class="form-control " id="name" name="name" placeholder="Ingrese el tipo de servicio" require>
+            <input type="text" class="form-control " id="name" name="name" placeholder="Ingrese el tipo de servicio" required>
         </div>
 
         <button type="submit" class="btn btn-success"><i class="bi bi-plus-lg"></i> Crear</button>
