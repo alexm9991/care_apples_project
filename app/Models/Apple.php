@@ -19,4 +19,10 @@ class Apple extends Model
         return $this->hasMany('App\Models\Municipality', 'id');
     }
 
+    public function women()
+{
+    return $this->belongsToMany(Woman::class, 'bookings', 'apple_id', 'woman_id');
+}
+
+
 }
