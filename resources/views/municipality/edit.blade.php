@@ -16,7 +16,7 @@
         </div>
 
         <button type="submit" class="btn btn-success">Editar</button>
-        <a href="./" class="btn btn-danger">Cancelar</a>
+        <a href="{{ route('apple.index') }}" class="btn btn-danger">Cancelar</a>
 
     </form>
 </div>

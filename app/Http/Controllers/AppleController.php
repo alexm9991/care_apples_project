@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Apple;
 use App\Models\Municipality;
 
+use Illuminate\Support\Facades\DB;
+
 use Illuminate\Http\Request;
 
 class AppleController extends Controller
@@ -16,9 +18,9 @@ class AppleController extends Controller
      */
     public function index()
     {
-        $apples = Apple::all();
-        $municipalities = Municipality::all();
-        return view('apple.index', compact('apples','municipalities'));
+        $apples = Apple::with('municipalities')->get();
+        return view('apple.index', ['apples' => $apples]);
+
     }
 
     /**
@@ -45,7 +47,8 @@ class AppleController extends Controller
             'name' => $request->get('name'),
             'location' => $request->get('location'),
             'address' => $request->get('address'),
-            'coordinates' => $request->get('coordinates'),
+            'latitude' => $request->get('latitude'),
+            'length' => $request->get('length'),
             'municipalities_id' => $request->get('municipalities_id'),
 
         ]);
@@ -73,8 +76,9 @@ class AppleController extends Controller
     public function edit($id)
     {
         $apple = Apple::find($id);
+        $municipalities = Municipality::all();
 
-        return view('apple.edit', compact('apple'));
+        return view('apple.edit', compact('apple','municipalities'));
     }
 
     /**
@@ -91,12 +95,15 @@ class AppleController extends Controller
         $apple->name = $request->input('name');
         $apple->location = $request->input('location');
         $apple->address = $request->input('address');
-        $apple->coordinates = $request->input('coordinates');
+        $apple->latitude = $request->input('latitude');
+        $apple->length = $request->input('length');
         $apple->municipalities_id = $request->input('municipalities_id');
+
+        $municipalities = Municipality::all();
 
         $apple->update();
 
-        return redirect('apple');
+        return view('apple.edit', compact('apple','municipalities'));
     }
 
     /**

@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('name',30);
             $table->string('location',30);
             $table->string('address',55);
-            $table->point('coordinates');
+            $table->double('latitude');
+            $table->double('length');
             $table->unsignedBigInteger('municipalities_id');
             $table->foreign('municipalities_id')->references('id')->on('municipalities');
             $table->timestamps();
