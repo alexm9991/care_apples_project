@@ -53,6 +53,30 @@
                                 </li>
                             @endif
                         @else
+<!-- inicio botones -->
+                            <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('municipality.index') }}"> Municipios </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('apple.index') }}"> Manzanas </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('service_type.index') }}"> Tipos servicio </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('service_category.index') }}"> Categoria servicio </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{--{{ route('service.index') }}--}}"> Servicios </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{--{{ route('woman.index') }}--}}"> Mujeres </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{--{{ route('booking.index') }}--}}"> Reservas </a>
+                                </li>
+                            <!-- Fin botones -->
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
