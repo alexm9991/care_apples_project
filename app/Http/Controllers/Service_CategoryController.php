@@ -63,7 +63,6 @@ class Service_CategoryController extends Controller
     public function edit($id)
     {
         $service_category = Service_Category::find($id);
-
         return view('service_category.edit', compact('service_category'));
     }
 
@@ -76,10 +75,10 @@ class Service_CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $service_category =Service_Category::find($id);
-        $municipality->name = $request->input('name');
+        $service_category = Service_Category::find($id);
+        $service_category->name = $request->input('name');
 
-        $municipality->update();
+        $service_category->update();
 
         return redirect('service_category');
     }

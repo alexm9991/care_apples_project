@@ -63,7 +63,6 @@ class Service_TypeController extends Controller
     public function edit($id)
     {
         $service_type = Service_Type::find($id);
-
         return view('service_type.edit', compact('service_type'));
     }
 

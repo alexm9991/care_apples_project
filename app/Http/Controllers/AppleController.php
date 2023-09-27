@@ -20,7 +20,6 @@ class AppleController extends Controller
     {
         $apples = Apple::with('municipalities')->get();
         return view('apple.index', ['apples' => $apples]);
-
     }
 
     /**
