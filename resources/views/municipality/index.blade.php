@@ -40,12 +40,6 @@
                             <i class="bi bi-trash" style="color: red; font-size: 150%;"></i>
                         </button>
                     </form>
-
-
-<!-- 
-                    <div class="row">
-                        <a class="btn" href="{{ route('municipality.destroy', $muni->id) }}"><i class="bi bi-trash" style="color:red ; font-size:150%"></i></a>
-                    </div> -->
                 </td>
             </tr>
             @endforeach

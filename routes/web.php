@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MunicipalityController;
+use App\Http\Controllers\AppleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,5 +22,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('municipality', MunicipalityController::class);
+Route::resource('apple', AppleController::class);
 
 
