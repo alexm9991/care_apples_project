@@ -8,7 +8,7 @@
 <div class="mx-5 px-5">
     <table class="table table-hover">
 
-        <a href="municipality/create" class="btn btn-success  mb-5">Crear Municipio</a>
+        <a href="municipality/create" class="btn btn-success  mb-5"><i class="bi bi-plus-lg"></i> Crear Municipio</a>
 
         <thead>
             <tr>
