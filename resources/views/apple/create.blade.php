@@ -10,29 +10,29 @@
         @csrf
         <div class="form-group">
             <label for="code">CODIGO</label>
-            <input type="number" class="form-control " id="code" name="code" require>
+            <input type="number" class="form-control " id="code" name="code" required>
         </div>
         <div class="form-group">
 
             <label for="name">NOMBRE</label>
-            <input type="text" class="form-control " id="name" name="name" require>
+            <input type="text" class="form-control " id="name" name="name" required>
         </div>
 
         <div class="form-group">
             <label for="location">LOCALIDAD</label>
-            <input type="text" class="form-control " id="location" name="location" require>
+            <input type="text" class="form-control " id="location" name="location" required>
         </div>
         <div class="form-group">
             <label for="address">DIRECCION</label>
-            <input type="text" class="form-control " id="address" name="address" require>
+            <input type="text" class="form-control " id="address" name="address" required>
         </div>
         <div class="form-group">
             <label for="latitude">LATITUD</label>
-            <input type="number" class="form-control " id="latitude" name="latitude" placeholder="Ingrese latitud" require>
+            <input type="number" class="form-control " id="latitude" name="latitude" placeholder="Ingrese latitud" required>
         </div>
         <div class="form-group">
             <label for="length">LONGITUD</label>
-            <input type="number" class="form-control " id="length" name="length" placeholder="Ingrese longitud" require>
+            <input type="number" class="form-control " id="length" name="length" placeholder="Ingrese longitud" required>
         </div>
         <div class="form-group">
             <label for="municipalities_id">MUNICIPIO</label>

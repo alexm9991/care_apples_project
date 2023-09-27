@@ -10,7 +10,7 @@
         @csrf
         <div class="form-group">
             <label for="name">NOMBRE</label>
-            <input type="text" class="form-control " id="name" name="name" placeholder="Ingrese el nombre del municipio" require>
+            <input type="text" class="form-control " id="name" name="name" placeholder="Ingrese el nombre del municipio" required>
         </div>
 
         <button type="submit" class="btn btn-success">Crear</button>

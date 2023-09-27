@@ -12,38 +12,38 @@
         
         <div class="form-group">
             <label for="code">CODIGO</label>
-            <input type="number" class="form-control" value="{{ $apple->code }}" id="code" name="code" require>
+            <input type="number" class="form-control" value="{{ $apple->code }}" id="code" name="code" required>
         </div>
 
         <div class="form-group">
             <label for="name">NOMBRE</label>
-            <input type="text" class="form-control" value="{{ $apple->name }}" id="name" name="name" placeholder="Ingrese el nombre de la manzana" require>
+            <input type="text" class="form-control" value="{{ $apple->name }}" id="name" name="name" placeholder="Ingrese el nombre de la manzana" required>
         </div>
 
         <div class="form-group">
             <label for="location">LOCALIDAD</label>
-            <input type="text" class="form-control" value="{{ $apple->location }}" id="location" name="location" require>
+            <input type="text" class="form-control" value="{{ $apple->location }}" id="location" name="location" required>
         </div>
 
         <div class="form-group">
             <label for="address">DIRECCION</label>
-            <input type="text" class="form-control" value="{{ $apple->address }}" id="address" name="address" require>
+            <input type="text" class="form-control" value="{{ $apple->address }}" id="address" name="address" required>
         </div>
 
         <div class="form-group">
             <label for="latitude">LATITUD</label>
-            <input type="number" class="form-control " value="{{ $apple->latitude }}" id="latitude" name="latitude" placeholder="Ingrese latitud" require>
+            <input type="number" class="form-control " value="{{ $apple->latitude }}" id="latitude" name="latitude" placeholder="Ingrese latitud" required>
         </div>
 
         <div class="form-group">
             <label for="length">LONGITUD</label>
-            <input type="number" class="form-control " value="{{ $apple->length }}" id="length" name="length" placeholder="Ingrese longitud" require>
+            <input type="number" class="form-control " value="{{ $apple->length }}" id="length" name="length" placeholder="Ingrese longitud" required>
         </div>
 
        <div class="form-group">
             <label for="municipalities_id">MUNICIPIO</label>
 
-            <select type="form-select" name="municipalities_id" class="form-control" required>
+            <select type="form-select" name="municipalities_id" class="form-control" requiredd>
                 
                 @foreach($municipalities as $muni)
                 <option value="{{$muni->id}}">{{$muni->name}} </option>
