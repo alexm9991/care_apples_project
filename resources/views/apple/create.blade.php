@@ -28,11 +28,11 @@
         </div>
         <div class="form-group">
             <label for="latitude">LATITUD</label>
-            <input type="double" class="form-control " id="latitude" name="latitude" placeholder="Ingrese latitud" require>
+            <input type="number" class="form-control " id="latitude" name="latitude" placeholder="Ingrese latitud" require>
         </div>
         <div class="form-group">
             <label for="length">LONGITUD</label>
-            <input type="double" class="form-control " id="length" name="length" placeholder="Ingrese longitud" require>
+            <input type="number" class="form-control " id="length" name="length" placeholder="Ingrese longitud" require>
         </div>
         <div class="form-group">
             <label for="municipalities_id">MUNICIPIO</label>

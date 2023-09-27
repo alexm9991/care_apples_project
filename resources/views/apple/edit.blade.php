@@ -32,12 +32,12 @@
 
         <div class="form-group">
             <label for="latitude">LATITUD</label>
-            <input type="double" class="form-control " value="{{ $apple->latitude }}" id="latitude" name="latitude" placeholder="Ingrese latitud" require>
+            <input type="number" class="form-control " value="{{ $apple->latitude }}" id="latitude" name="latitude" placeholder="Ingrese latitud" require>
         </div>
 
         <div class="form-group">
             <label for="length">LONGITUD</label>
-            <input type="double" class="form-control " value="{{ $apple->length }}" id="length" name="length" placeholder="Ingrese longitud" require>
+            <input type="number" class="form-control " value="{{ $apple->length }}" id="length" name="length" placeholder="Ingrese longitud" require>
         </div>
 
        <div class="form-group">
