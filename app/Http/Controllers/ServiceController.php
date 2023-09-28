@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Service;
 use App\Models\Service_Category;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -24,7 +24,7 @@ requerirán que el usuario
 
     public function index()
     {
-        $services = Service::with('service_categories')->get();
+        $services = Service::with('category')->get();
         return view('service.index', ['services' => $services]);
     }
 
@@ -37,8 +37,10 @@ requerirán que el usuario
 
     public function create()
     {
-        $services = Service::all();
-        return view('service.create', compact('services'));
+        $category = Service_Category::all();
+        $service = Service::all();
+
+        return view('service.create', compact('service','category'));
     
     }
 
@@ -86,7 +88,9 @@ requerirán que el usuario
         $service = Service::find($id);
         $category = Service_Category::all();
 
-        return view('service.edit', compact('service','category'));
+        return view('service.edit', [
+            'service' => $service,
+            'category' => $category]);
     }
 
     /**
@@ -104,7 +108,7 @@ requerirán que el usuario
         $service->code = $request->input('code');
         $service->name = $request->input('name');
         $service->description = $request->input('description');
-        $service->service_Categories_id = $request->input('service_categories_id');
+        $service->service_categories_id = $request->input('service_categories_id');
 
         $category = Service_Category::all();
 

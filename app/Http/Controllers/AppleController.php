@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Apple;
 use App\Models\Municipality;
-
 use Illuminate\Support\Facades\DB;
-
 use Illuminate\Http\Request;
 
 class AppleController extends Controller

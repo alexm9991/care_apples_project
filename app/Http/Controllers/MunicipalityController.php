@@ -34,7 +34,7 @@ requerirán que el usuario
             'name' => $request->get('name')
         ]);
 
-        return redirect('municipality');
+        return redirect('municipality')->with('ok', 'ok');;
     }
 
     public function show($id)
