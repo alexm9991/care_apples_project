@@ -8,6 +8,7 @@ use App\Http\Controllers\Service_CategoryController;
 use App\Http\Controllers\Service_Type_CategoryController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +21,7 @@ use App\Http\Controllers\Service_Type_CategoryController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
@@ -31,6 +32,7 @@ Route::resource('apple', AppleController::class);
 Route::resource('service_type', Service_TypeController::class);
 Route::resource('service_category', Service_CategoryController::class);
 Route::resource('service_type_category', Service_Type_CategoryController::class);
+
 
 
 
