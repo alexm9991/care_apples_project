@@ -10,8 +10,19 @@ use App\Http\Controllers\WomanController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\EstablishmentController;
 
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
@@ -25,6 +36,7 @@ Route::resource('service_type_category', Service_Type_CategoryController::class)
 Route::resource('woman', WomanController::class);
 Route::resource('service', ServiceController::class);
 Route::resource('establishment', EstablishmentController::class);
+
 
 
 
