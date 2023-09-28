@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// use App\Exports\UsersExport;
+// use Maatwebsite\Excel\Facades\Excel;
 
 class UserController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+/* todas las acciones (métodos) del controlador 
+requerirán que el usuario
+ esté autenticado antes de poder acceder a ellas. */
+ public function __construct(){
+    $this->middleware('auth');
+}
     /**
      * Display a listing of the resource.
      *

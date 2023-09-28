@@ -9,15 +9,19 @@ use Illuminate\Http\Request;
 
 class WomanController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+/* todas las acciones (métodos) del controlador 
+requerirán que el usuario
+ esté autenticado antes de poder acceder a ellas. */
+ public function __construct(){
+    $this->middleware('auth');
+}
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    // Funcion del index, donde  enlista los registros existentes
+
     public function index()
     {
         $womans = Woman::all();
@@ -29,6 +33,8 @@ class WomanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // Funcion del create que redirige a la vista de creación
+
     public function create()
     {
         return view('woman.create');
@@ -40,6 +46,8 @@ class WomanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    // Funcion del store que crea el registro con los datos especificados
+
     public function store(Request $request)
     {
         Woman::create([
@@ -75,6 +83,8 @@ class WomanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // Funcion del edit que abre la vista de editar
+
     public function edit($id)
     {
         $woman = Woman::find($id);
@@ -88,6 +98,8 @@ class WomanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // Funcion del update que permite modificar el servicio especificado por el id
+
     public function update(Request $request, $id)
     {
         $woman =Woman::find($id);
@@ -113,6 +125,8 @@ class WomanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // Funcion del destroy que elimina el registro en la base de datos
+
     public function destroy($id)
     {
         $woman = Woman::find($id);

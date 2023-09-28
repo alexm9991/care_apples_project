@@ -15,6 +15,8 @@ class EstablishmentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // Funcion del index, donde  enlista los registros existentes
+
     public function index()
     {
         //
@@ -25,6 +27,8 @@ class EstablishmentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // Funcion del create que redirige a la vista de creación
+
     public function create()
     {
         //
@@ -36,6 +40,8 @@ class EstablishmentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    // Funcion del store que crea el registro con los datos especificados
+
     public function store(Request $request)
     {
         //
@@ -58,6 +64,8 @@ class EstablishmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // Funcion del edit que abre la vista de editar
+
     public function edit($id)
     {
         //
@@ -70,6 +78,8 @@ class EstablishmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // Funcion del update que permite modificar el servicio especificado por el id
+
     public function update(Request $request, $id)
     {
         //
@@ -81,6 +91,8 @@ class EstablishmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // Funcion del destroy que elimina el registro en la base de datos
+
     public function destroy($id)
     {
         //
