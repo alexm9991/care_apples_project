@@ -14,7 +14,7 @@
         </div>
 
         <button type="submit" class="btn btn-success"><i class="bi bi-plus-lg"></i> Crear</button>
-        <a href="./" class="btn btn-danger"><i class="bi bi-x-lg"></i> Cancelar</a>
+        <a href="{{Route('municipality.index')}}" class="btn btn-danger"><i class="bi bi-x-lg"></i> Cancelar</a>
 
     </form>
 </div>
