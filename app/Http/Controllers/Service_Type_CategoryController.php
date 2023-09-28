@@ -14,6 +14,10 @@ use Illuminate\Http\Request;
 
 class Service_Type_CategoryController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
