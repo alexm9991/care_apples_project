@@ -8,13 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Service extends Model
 {
     use HasFactory;
-    protected $fillable=['code','name','description','service_categories_id'];
+    protected $fillable=[
+        'code','name','description',
+        'service_categories_id'];
     protected $table='services';
 
       // Definir la relación "muchos a uno" con Service_Category
       public function category()
       {
-          return $this->belongsTo(Service_Category::class, 'service_categories_id');
+          return $this->belongsTo('App\Models\Service_Category'::class, 'id');
       }
 
       public function establishments()

@@ -49,11 +49,11 @@
             <nav style="margin-left:0" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                 <div class="">
                     <!-- logo -->
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand pl-5 ml-3 mt-3" href="#">
                         <img id="logo" src="images/logom.png" width="30" style="padding:0">
                     </a>
 
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/home') }}">
                         {{ config('app.name', 'Manzanas del Cuidado') }}
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -107,7 +107,7 @@
                                 <a class="nav-link" href="{{--{{ route('booking.index') }}--}}"> RESERVAS </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{--{{ route('booking.index') }}--}}">ESTABLECIMIENTO </a>
+                                <a class="nav-link" href="{{ route('establishment.index') }}">ESTABLECIMIENTO </a>
                             </li>
                             <!-- Fin botones -->
 
