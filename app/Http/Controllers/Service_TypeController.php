@@ -7,6 +7,13 @@ use App\Models\Service_Type;
 
 class Service_TypeController extends Controller
 {
+/* todas las acciones (métodos) del controlador 
+requerirán que el usuario
+ esté autenticado antes de poder acceder a ellas. */
+ public function __construct(){
+    $this->middleware('auth');
+}
+
     /**
      * Display a listing of the resource.
      *

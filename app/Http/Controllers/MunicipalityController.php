@@ -8,6 +8,13 @@ use App\Models\Municipality;
 class MunicipalityController extends Controller
 {
 
+/* todas las acciones (métodos) del controlador 
+requerirán que el usuario
+ esté autenticado antes de poder acceder a ellas. */
+ public function __construct(){
+    $this->middleware('auth');
+}
+
     public function index()
     {
         $municipalities = Municipality::all();

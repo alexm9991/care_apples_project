@@ -3,9 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// use App\Exports\UsersExport;
+// use Maatwebsite\Excel\Facades\Excel;
 
 class UserController extends Controller
 {
+/* todas las acciones (métodos) del controlador 
+requerirán que el usuario
+ esté autenticado antes de poder acceder a ellas. */
+ public function __construct(){
+    $this->middleware('auth');
+}
+
+// public function export() 
+// {
+//     return Excel::download(new UsersExport, 'users.xlsx');
+// }
+
     /**
      * Display a listing of the resource.
      *
