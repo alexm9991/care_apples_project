@@ -28,8 +28,6 @@
             <td class="text-center align-middle" style="font-size: 130%;">{{ $service->code }}</td>
             <td class="text-center align-middle" style="font-size: 130%;">{{ $service->name }}</td>
             <td class="text-center align-middle" style="font-size: 130%;">{{ $service->description }}</td>
-
-                <td class="text-center align-middle" style="font-size: 130%;">icon ver</td>
                 <td class="text-center">
                     <div class="row">
                         <a class="btn" href="{{ route('service.edit', $service->id) }}"><i class="bi bi-pencil-square" style="color:green; font-size:150%"></i></a>
@@ -40,7 +38,7 @@
                     <form action="{{ route('service.destroy', $service->id) }}" method="POST" style="display: inline;">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-link" onclick="return confirm('¿Estás seguro de que deseas eliminar esta manzana?')">
+                        <button type="submit" class="btn btn-link" onclick="return confirm('¿Estás seguro de que deseas eliminar el servicio?')">
                             <i class="bi bi-trash" style="color: red; font-size: 150%;"></i>
                         </button>
                     </form>
@@ -48,11 +46,6 @@
                 </td>
             </tr>
             @endforeach
-
-            <tr>
-
-            </tr>
-
         </tbody>
     </table>
 </div>

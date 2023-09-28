@@ -37,7 +37,7 @@
 		</div>
 
 		<div class="form-group">
-			<label for="municipalities_id">Municipio</label>
+			<label for="municipalities_id">MUNICIPIO</label>
 			<select class="form-control" name="municipalities_id" required>
         @foreach($municipalities as $municipality)
             <option value="{{ $municipality->id }}" {{ $municipality->id == $apple->municipalities_id ? 'selected' : '' }}>
