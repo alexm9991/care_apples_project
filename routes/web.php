@@ -8,6 +8,7 @@ use App\Http\Controllers\Service_CategoryController;
 use App\Http\Controllers\Service_Type_CategoryController;
 use App\Http\Controllers\WomanController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\EstablishmentController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,6 +24,8 @@ Route::resource('service_category', Service_CategoryController::class);
 Route::resource('service_type_category', Service_Type_CategoryController::class);
 Route::resource('woman', WomanController::class);
 Route::resource('service', ServiceController::class);
+Route::resource('establishment', EstablishmentController::class);
+
 
 
 

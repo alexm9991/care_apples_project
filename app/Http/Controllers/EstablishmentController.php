@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Establishment;
 
 class EstablishmentController extends Controller
 {
@@ -19,7 +20,8 @@ class EstablishmentController extends Controller
 
     public function index()
     {
-        //
+        $establishments = Establishment::all();
+        return view('establishment.index', compact('establishments'));
     }
 
     /**
@@ -31,7 +33,7 @@ class EstablishmentController extends Controller
 
     public function create()
     {
-        //
+        return view('establishment.create');
     }
 
     /**
@@ -44,7 +46,15 @@ class EstablishmentController extends Controller
 
     public function store(Request $request)
     {
-        //
+        Establishment::create([
+            'code' => $request->get('code'),
+            'name' => $request->get('name'),
+            'manager' => $request->get('manager'),
+            'address' => $request->get('address'),
+
+        ]);
+
+        return redirect('establishment');
     }
 
     /**
@@ -68,7 +78,9 @@ class EstablishmentController extends Controller
 
     public function edit($id)
     {
-        //
+        $establishment = Establishment::find($id);
+        return view('establishment.edit', compact('establishment'));
+   
     }
 
     /**
@@ -82,7 +94,15 @@ class EstablishmentController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+        $establishment =Establishment::find($id);
+        $establishment->code = $request->input('code');
+        $establishment->name = $request->input('name');
+        $establishment->manager = $request->input('manager');
+        $establishment->address = $request->input('address');
+
+        $establishment->update();
+
+        return redirect('establishment');
     }
 
     /**
@@ -95,6 +115,9 @@ class EstablishmentController extends Controller
 
     public function destroy($id)
     {
-        //
+        $establishment = Establishment::find($id);
+        $establishment->delete();
+
+        return redirect('establishment');
     }
 }
