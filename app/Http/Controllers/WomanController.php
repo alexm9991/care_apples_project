@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Woman;
+
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class WomanController extends Controller
@@ -13,7 +16,8 @@ class WomanController extends Controller
      */
     public function index()
     {
-        //
+        $womans = Woman::all();
+        return view('woman.index', ['womans' => $womans]);
     }
 
     /**
@@ -23,7 +27,7 @@ class WomanController extends Controller
      */
     public function create()
     {
-        //
+        return view('woman.create');
     }
 
     /**
@@ -34,7 +38,20 @@ class WomanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Woman::create([
+            'name' => $request->get('name'),
+            'last_name' => $request->get('last_name'),
+            'identification_type_id' => $request->get('identification_type_id'),
+            'identification_number' => $request->get('identification_number'),
+            'phone_number' => $request->get('phone_number'),
+            'city' => $request->get('city'),
+            'address' => $request->get('address'),
+            'occupation' => $request->get('occupation'),
+            'services_id' => $request->get('services_id'),
+            'users_id' => $request->get('users_id'),
+        ]);
+
+        return redirect('woman');
     }
 
     /**
@@ -56,7 +73,8 @@ class WomanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $woman = Woman::find($id);
+        return view('woman.edit', compact('woman'));
     }
 
     /**
@@ -68,7 +86,21 @@ class WomanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $woman =Woman::find($id);
+        $woman->name = $request->input('name');
+        $woman->last_name = $request->input('last_name');
+        $woman->identification_type_id = $request->input('identification_type_id');
+        $woman->identification_number = $request->input('identification_number');
+        $woman->phone_number = $request->input('phone_number');
+        $woman->city = $request->input('city');
+        $woman->address = $request->input('address');
+        $woman->occupation = $request->input('occupation');
+        $woman->services_id = $request->input('services_id');
+        $woman->users_id = $request->input('users_id');
+
+        $woman->update();
+
+        return redirect('woman');
     }
 
     /**
@@ -79,6 +111,9 @@ class WomanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $woman = Woman::find($id);
+        $woman->delete();
+
+        return redirect('woman');
     }
 }
